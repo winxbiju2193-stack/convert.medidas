@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor Múltiplo de Medidas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Central de Conversores</h1>
+        
+        <!-- Menu de Seleção Geral -->
+        <div class="menu-selecao">
+            <button class="btn-menu ativo" onclick="mudarConversor('temperatura')">Temperatura</button>
+            <button class="btn-menu" onclick="mudarConversor('distancia')">Distância</button>
+        </div>
+
+        <!-- Conversor de Temperatura -->
+        <div id="painel-temperatura" class="painel ativo">
+            <h2>Conversor de Temperatura</h2>
+            <div class="grupo-input">
+                <label for="valor-temp">Valor:</label>
+                <input type="number" id="valor-temp" placeholder="Digite o valor" oninput="converterTemperatura()">
+            </div>
+            
+            <div class="grupo-select">
+                <div>
+                    <label for="de-temp">De:</label>
+                    <select id="de-temp" onchange="converterTemperatura()">
+                        <option value="celsius">Celsius (°C)</option>
+                        <option value="fahrenheit">Fahrenheit (°F)</option>
+                        <option value="kelvin">Kelvin (K)</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="para-temp">Para:</label>
+                    <select id="para-temp" onchange="converterTemperatura()">
+                        <option value="celsius">Celsius (°C)</option>
+                        <option value="fahrenheit" selected>Fahrenheit (°F)</option>
+                        <option value="kelvin">Kelvin (K)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="resultado">
+                <h3>Resultado:</h3>
+                <p id="resultado-temp">--</p>
+            </div>
+        </div>
+
+        <!-- Conversor de Distância -->
+        <div id="painel-distancia" class="painel">
+            <h2>Conversor de Distância</h2>
+            <div class="grupo-input">
+                <label for="valor-dist">Valor:</label>
+                <input type="number" id="valor-dist" placeholder="Digite o valor" oninput="converterDistancia()">
+            </div>
+            
+            <div class="grupo-select">
+                <div>
+                    <label for="de-dist">De:</label>
+                    <select id="de-dist" onchange="converterDistancia()">
+                        <option value="metro">Metro (m)</option>
+                        <option value="quilometro">Quilômetro (km)</option>
+                        <option value="centimetro">Centímetro (cm)</option>
+                        <option value="milimetro">Milímetro (mm)</option>
+                        <option value="milha">Milha (mi)</option>
+                        <option value="jarda">Jarda (yd)</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="para-dist">Para:</label>
+                    <select id="para-dist" onchange="converterDistancia()">
+                        <option value="metro">Metro (m)</option>
+                        <option value="quilometro" selected>Quilômetro (km)</option>
+                        <option value="centimetro">Centímetro (cm)</option>
+                        <option value="milimetro">Milímetro (mm)</option>
+                        <option value="milha">Milha (mi)</option>
+                        <option value="jarda">Jarda (yd)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="resultado">
+                <h3>Resultado:</h3>
+                <p id="resultado-dist">--</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
