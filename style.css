@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+/* Menu de Seleção */
+.menu-selecao {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.btn-menu {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: #e0e0e0;
+    color: #555;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-menu.ativo {
+    background: #007bff;
+    color: white;
+}
+
+/* Paineis */
+.painel {
+    display: none;
+}
+
+.painel.ativo {
+    display: block;
+}
+
+h2 {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.grupo-input, .grupo-select {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #007bff;
+}
+
+.grupo-select {
+    display: flex;
+    gap: 10px;
+}
+
+.grupo-select > div {
+    flex: 1;
+}
+
+.resultado {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+    margin-top: 20px;
+    border-left: 4px solid #007bff;
+}
+
+.resultado h3 {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.resultado p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+}
